@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milk Dairy Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Milk Dairy Tracker</h1>
+    </header>
+    <main>
+        <div class="container">
+            <h2>Customer Milk Consumption</h2>
+            <label for="customerName">Customer Name:</label>
+            <input type="text" id="customerName" placeholder="Enter customer name">
+
+            <label for="dailyLiters">liters per day:</label>
+            <input type="number" id="dailyLiters" placeholder="Enter daily milk quantity">
+
+            <button onclick="addDailyConsumption()">Add Daily Consumption</button>
+
+            <h3>Weekly Summary</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Liters</th>
+                        
+                    </tr>
+                </thead>
+                <tbody id="dailyTable">
+                     
+                </tbody>
+            </table>
+
+            <p><strong>Weekly Total Liters:</strong> <span id="weeklyLiters">0</span></p>
+            <p><strong>Weekly Bill:</strong> $<span id="weeklyBill">0</span></p>
+
+            <label for="searchName">Search Weekly Bill:</label>
+            <input type="text" id="searchName" placeholder="Enter customer name">
+            <button onclick="searchBill()">Search</button>
+
+            <p id="searchResult"></p>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
